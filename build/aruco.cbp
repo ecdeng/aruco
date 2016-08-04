@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="aruco" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\OpenCV\;CMake Files\src\;CMake Files\utils\;CMake Files\utils_markermap\;CMake Files\utils_calibration\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install">
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 install" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/local">
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 install/local" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/strip">
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 install/strip" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="list_install_components">
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 list_install_components" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="uninstall">
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 uninstall" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/src/libaruco.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/src" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/build/src" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src/." />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/src/Makefile&quot;  VERBOSE=1 aruco" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/src/libaruco.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/src" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/build/src" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src/." />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/src/Makefile&quot;  VERBOSE=1 aruco/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_print_dictionary">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_print_dictionary" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_print_dictionary" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_print_dictionary/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_print_dictionary" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_print_dictionary/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_print_marker">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_print_marker" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_print_marker" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_print_marker/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_print_marker" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_print_marker/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_simple">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_simple" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_simple" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_simple/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_simple" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_simple/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_test">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_test" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_test" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_test/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_test" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_test/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_tracker">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_tracker" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_tracker" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_tracker/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils/aruco_tracker" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 aruco_tracker/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_create_markermap">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/aruco_create_markermap" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 aruco_create_markermap" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_create_markermap/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/aruco_create_markermap" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 aruco_create_markermap/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_markermap_pix2meters">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/aruco_markermap_pix2meters" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 aruco_markermap_pix2meters" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_markermap_pix2meters/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/aruco_markermap_pix2meters" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 aruco_markermap_pix2meters/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_simple_markermap">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/aruco_simple_markermap" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 aruco_simple_markermap" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_simple_markermap/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/aruco_simple_markermap" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 aruco_simple_markermap/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_test_markermap">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/aruco_test_markermap" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 aruco_test_markermap" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_test_markermap/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/aruco_test_markermap" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 aruco_test_markermap/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_calibration">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/aruco_calibration" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 aruco_calibration" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_calibration/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/aruco_calibration" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 aruco_calibration/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_calibration_fromimages">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/aruco_calibration_fromimages" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 aruco_calibration_fromimages" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="aruco_calibration_fromimages/fast">
+         <Option output="/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/aruco_calibration_fromimages" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DDOUBLE_PRECISION_PNP" />
+            <Add option="-DUSE_OMP" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/3rdparty/eigen3" />
+            <Add directory="/home/x/Libs/aruco/aruco-2.0.10/src" />
+            <Add directory="/opt/ros/indigo/include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 aruco_calibration_fromimages/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/ar_omp.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/cameraparameters.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/cvdrawingutils.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/dictionary.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/ippe.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/marker.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markerdetector.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markerlabeler.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markerlabelers/dictionary_based.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markerlabelers/svmmarkers.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markermap.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/posetracker.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils/aruco_print_dictionary.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils/aruco_print_marker.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils/aruco_simple.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils/aruco_test.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils/aruco_tracker.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_calibration/aruco_calibration.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_calibration/aruco_calibration_fromimages.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_markermap/aruco_create_markermap.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_markermap/aruco_markermap_pix2meters.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_markermap/aruco_simple_markermap.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_markermap/aruco_test_markermap.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_markermap/pcdwriter.cpp">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/ar_omp.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/aruco.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/cameraparameters.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/cvdrawingutils.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/dictionary.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/exports.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/ippe.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/levmarq.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/marker.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markerdetector.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markerlabeler.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markerlabelers/dictionary_based.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markerlabelers/svmmarkers.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/markermap.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/posetracker.h">
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/config.cmake.in">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/aruco.pc.in">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/aruco-uninstalled.pc.in">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/../../../../../usr/share/OpenCV/OpenCVConfig-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/../../../../../usr/share/OpenCV/OpenCVConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/../../../../../usr/share/OpenCV/OpenCVModules.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/../../../../../usr/share/OpenCV/OpenCVModules-release.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\utils\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_markermap/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\utils_markermap\" />
+      </Unit>
+      <Unit filename="/home/x/Libs/aruco/aruco-2.0.10/utils_calibration/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\utils_calibration\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

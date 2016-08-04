@@ -1,0 +1,13 @@
+/home/x/Libs/aruco/aruco-2.0.10/build/src/CMakeFiles/aruco.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/CMakeFiles/aruco_calibration.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/CMakeFiles/aruco_calibration_fromimages.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/CMakeFiles/aruco_create_markermap.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/CMakeFiles/aruco_markermap_pix2meters.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils/CMakeFiles/aruco_print_dictionary.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils/CMakeFiles/aruco_print_marker.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils/CMakeFiles/aruco_simple.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/CMakeFiles/aruco_simple_markermap.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils/CMakeFiles/aruco_test.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/CMakeFiles/aruco_test_markermap.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/utils/CMakeFiles/aruco_tracker.dir
+/home/x/Libs/aruco/aruco-2.0.10/build/CMakeFiles/uninstall.dir
