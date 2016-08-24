@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/aruco_test_markermap.dir/aruco_test_markermap.cpp.o"
   "CMakeFiles/aruco_test_markermap.dir/pcdwriter.cpp.o"
+  "CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o"
   "aruco_test_markermap.pdb"
   "aruco_test_markermap"
 )

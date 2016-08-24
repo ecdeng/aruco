@@ -95,16 +95,41 @@ utils_markermap/CMakeFiles/aruco_test_markermap.dir/pcdwriter.cpp.o.provides: ut
 
 utils_markermap/CMakeFiles/aruco_test_markermap.dir/pcdwriter.cpp.o.provides.build: utils_markermap/CMakeFiles/aruco_test_markermap.dir/pcdwriter.cpp.o
 
+utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o: utils_markermap/CMakeFiles/aruco_test_markermap.dir/flags.make
+utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o: ../utils_markermap/MVCamera.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/x/Libs/aruco/aruco-2.0.10/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o"
+	cd /home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o -c /home/x/Libs/aruco/aruco-2.0.10/utils_markermap/MVCamera.cpp
+
+utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.i"
+	cd /home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/x/Libs/aruco/aruco-2.0.10/utils_markermap/MVCamera.cpp > CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.i
+
+utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.s"
+	cd /home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/x/Libs/aruco/aruco-2.0.10/utils_markermap/MVCamera.cpp -o CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.s
+
+utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o.requires:
+.PHONY : utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o.requires
+
+utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o.provides: utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o.requires
+	$(MAKE) -f utils_markermap/CMakeFiles/aruco_test_markermap.dir/build.make utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o.provides.build
+.PHONY : utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o.provides
+
+utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o.provides.build: utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o
+
 # Object files for target aruco_test_markermap
 aruco_test_markermap_OBJECTS = \
 "CMakeFiles/aruco_test_markermap.dir/aruco_test_markermap.cpp.o" \
-"CMakeFiles/aruco_test_markermap.dir/pcdwriter.cpp.o"
+"CMakeFiles/aruco_test_markermap.dir/pcdwriter.cpp.o" \
+"CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o"
 
 # External object files for target aruco_test_markermap
 aruco_test_markermap_EXTERNAL_OBJECTS =
 
 utils_markermap/aruco_test_markermap: utils_markermap/CMakeFiles/aruco_test_markermap.dir/aruco_test_markermap.cpp.o
 utils_markermap/aruco_test_markermap: utils_markermap/CMakeFiles/aruco_test_markermap.dir/pcdwriter.cpp.o
+utils_markermap/aruco_test_markermap: utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o
 utils_markermap/aruco_test_markermap: utils_markermap/CMakeFiles/aruco_test_markermap.dir/build.make
 utils_markermap/aruco_test_markermap: src/libaruco.so.2.0.9
 utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8
@@ -125,6 +150,28 @@ utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libopencv_featur
 utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8
 utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8
 utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libtf.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libtf2_ros.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libactionlib.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libmessage_filters.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libroscpp.so
+utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libxmlrpcpp.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libtf2.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libroscpp_serialization.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/librosconsole.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+utils_markermap/aruco_test_markermap: /usr/lib/liblog4cxx.so
+utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/librostime.so
+utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+utils_markermap/aruco_test_markermap: /opt/ros/indigo/lib/libcpp_common.so
+utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libboost_system.so
+utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libpthread.so
+utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8
 utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8
 utils_markermap/aruco_test_markermap: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8
@@ -146,6 +193,7 @@ utils_markermap/CMakeFiles/aruco_test_markermap.dir/build: utils_markermap/aruco
 
 utils_markermap/CMakeFiles/aruco_test_markermap.dir/requires: utils_markermap/CMakeFiles/aruco_test_markermap.dir/aruco_test_markermap.cpp.o.requires
 utils_markermap/CMakeFiles/aruco_test_markermap.dir/requires: utils_markermap/CMakeFiles/aruco_test_markermap.dir/pcdwriter.cpp.o.requires
+utils_markermap/CMakeFiles/aruco_test_markermap.dir/requires: utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o.requires
 .PHONY : utils_markermap/CMakeFiles/aruco_test_markermap.dir/requires
 
 utils_markermap/CMakeFiles/aruco_test_markermap.dir/clean:

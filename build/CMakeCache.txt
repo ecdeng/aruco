@@ -17,7 +17,7 @@
 //Set to OFF to build static libraries
 BUILD_GLSAMPLES:BOOL=OFF
 
-//Set to OFF to build static libraries
+//Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
 //Set to OFF to not compile utils 
@@ -26,12 +26,21 @@ BUILD_TESTS:BOOL=OFF
 //Set to OFF to not compile utils 
 BUILD_UTILS:BOOL=ON
 
+//Catkin enable testing
+CATKIN_ENABLE_TESTING:BOOL=ON
+
+//Prefix to apply to package generated via gendebian
+CATKIN_PACKAGE_PREFIX:STRING=
+
+//Catkin skip testing
+CATKIN_SKIP_TESTING:BOOL=OFF
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=Release
 
 //The CodeBlocks executable
 CMAKE_CODEBLOCKS_EXECUTABLE:FILEPATH=CMAKE_CODEBLOCKS_EXECUTABLE-NOTFOUND
@@ -185,14 +194,47 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a program.
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
+
+//Empy script
+EMPY_SCRIPT:STRING=/usr/bin/empy
+
 //Enable profiling in the GCC compiler (Add flags: -g -pg)
 ENABLE_PROFILING:BOOL=OFF
 
 //Path to a library.
 GLUT_glut_LIBRARY:FILEPATH=GLUT_glut_LIBRARY-NOTFOUND
 
+//Path to a file.
+GTEST_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+GTEST_LIBRARY:FILEPATH=GTEST_LIBRARY-NOTFOUND
+
+//Path to a library.
+GTEST_LIBRARY_DEBUG:FILEPATH=GTEST_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
+
+//Path to a library.
+GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
+
 //Set to ON to build/install Documentation
 INSTALL_DOC:BOOL=OFF
+
+//lsb_release executable was found
+LSB_FOUND:BOOL=TRUE
+
+//Path to a program.
+LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
+
+//Path to a program.
+NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
 //Path where debug 3rdpaty OpenCV dependencies are located
 OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
@@ -216,6 +258,24 @@ OpenMP_CXX_FLAGS:STRING=-fopenmp
 
 //C compiler flags for OpenMP parallization
 OpenMP_C_FLAGS:STRING=-fopenmp
+
+//Path to a program.
+PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
+
+//Specify specific Python version to use ('major.minor' or 'major')
+PYTHON_VERSION:STRING=
+
+//Path to a library.
+RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
+
+//Enable debian style python package layout
+SETUPTOOLS_DEB_LAYOUT:BOOL=ON
+
+//LSB Distrib tag
+UBUNTU:BOOL=TRUE
+
+//LSB Distrib - codename tag
+UBUNTU_TRUSTY:BOOL=TRUE
 
 //Set Double/float precision for posetracker
 USE_DOUBLE_PRECISION_PNP:BOOL=ON
@@ -250,20 +310,156 @@ WARNINGS_ARE_ERRORS:BOOL=OFF
 //Flags for whole program optimization.
 WHOLE_PROGRAM_OPTIMIZATION:BOOL=OFF
 
+//Path to a file.
+_CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
+
+//Path to a file.
+_CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
+
+//The directory containing a CMake configuration file for actionlib.
+actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
+
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
+
 //Value Computed by CMake
 aruco_BINARY_DIR:STATIC=/home/x/Libs/aruco/aruco-2.0.10/build
 
 //Dependencies for the target
-aruco_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_video;general;opencv_ts;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;
+aruco_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_video;general;opencv_ts;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;general;libMVSDK.so;
 
 //Value Computed by CMake
 aruco_SOURCE_DIR:STATIC=/home/x/Libs/aruco/aruco-2.0.10
+
+//The directory containing a CMake configuration file for catkin.
+catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
+
+//The directory containing a CMake configuration file for cpp_common.
+cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for gencpp.
+gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
+
+//The directory containing a CMake configuration file for genlisp.
+genlisp_DIR:PATH=/opt/ros/indigo/share/genlisp/cmake
+
+//The directory containing a CMake configuration file for genmsg.
+genmsg_DIR:PATH=/opt/ros/indigo/share/genmsg/cmake
+
+//The directory containing a CMake configuration file for genpy.
+genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
+
+//Value Computed by CMake
+gtest_BINARY_DIR:STATIC=/home/x/Libs/aruco/aruco-2.0.10/build/gtest
+
+//Dependencies for the target
+gtest_LIB_DEPENDS:STATIC=general;aruco;general;opencv_videostab;general;opencv_video;general;opencv_ts;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;
+
+//Value Computed by CMake
+gtest_SOURCE_DIR:STATIC=/usr/src/gtest
+
+//Build gtest's sample programs.
+gtest_build_samples:BOOL=OFF
+
+//Build all of gtest's own tests.
+gtest_build_tests:BOOL=OFF
+
+//Disable uses of pthreads in gtest.
+gtest_disable_pthreads:BOOL=OFF
+
+//Use shared (DLL) run-time lib even when Google Test is built
+// as static lib.
+gtest_force_shared_crt:BOOL=OFF
+
+//Dependencies for the target
+gtest_main_LIB_DEPENDS:STATIC=general;aruco;general;opencv_videostab;general;opencv_video;general;opencv_ts;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;general;gtest;
+
+//Path to a library.
+lib:FILEPATH=/opt/ros/indigo/lib/libtopic_tools.so
+
+//The directory containing a CMake configuration file for message_filters.
+message_filters_DIR:PATH=/opt/ros/indigo/share/message_filters/cmake
+
+//The directory containing a CMake configuration file for message_generation.
+message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
+
+//The directory containing a CMake configuration file for message_runtime.
+message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for rosbag.
+rosbag_DIR:PATH=/opt/ros/indigo/share/rosbag/cmake
+
+//The directory containing a CMake configuration file for rosbag_storage.
+rosbag_storage_DIR:PATH=/opt/ros/indigo/share/rosbag_storage/cmake
+
+//The directory containing a CMake configuration file for rosconsole.
+rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for roscpp.
+roscpp_DIR:PATH=/opt/ros/indigo/share/roscpp/cmake
+
+//The directory containing a CMake configuration file for roscpp_serialization.
+roscpp_serialization_DIR:PATH=/opt/ros/indigo/share/roscpp_serialization/cmake
+
+//The directory containing a CMake configuration file for roscpp_traits.
+roscpp_traits_DIR:PATH=/opt/ros/indigo/share/roscpp_traits/cmake
+
+//The directory containing a CMake configuration file for rosgraph.
+rosgraph_DIR:PATH=/opt/ros/indigo/share/rosgraph/cmake
+
+//The directory containing a CMake configuration file for rosgraph_msgs.
+rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/indigo/share/roslaunch/cmake
+
+//The directory containing a CMake configuration file for roslz4.
+roslz4_DIR:PATH=/opt/ros/indigo/share/roslz4/cmake
+
+//The directory containing a CMake configuration file for rospy.
+rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
+
+//The directory containing a CMake configuration file for rostime.
+rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
+
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
+
+//The directory containing a CMake configuration file for std_msgs.
+std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for tf2.
+tf2_DIR:PATH=/opt/ros/indigo/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_msgs.
+tf2_msgs_DIR:PATH=/opt/ros/indigo/share/tf2_msgs/cmake
+
+//The directory containing a CMake configuration file for tf2_py.
+tf2_py_DIR:PATH=/opt/ros/indigo/share/tf2_py/cmake
+
+//The directory containing a CMake configuration file for tf2_ros.
+tf2_ros_DIR:PATH=/opt/ros/indigo/share/tf2_ros/cmake
+
+//The directory containing a CMake configuration file for tf.
+tf_DIR:PATH=/opt/ros/indigo/share/tf/cmake
+
+//The directory containing a CMake configuration file for topic_tools.
+topic_tools_DIR:PATH=/opt/ros/indigo/share/topic_tools/cmake
+
+//The directory containing a CMake configuration file for xmlrpcpp.
+xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
 
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//catkin environment
+CATKIN_ENV:INTERNAL=/home/x/Libs/aruco/aruco-2.0.10/build/catkin_generated/env_cached.sh
+CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/x/Libs/aruco/aruco-2.0.10/build/test_results
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_BUILD_TOOL
@@ -338,6 +534,10 @@ CMAKE_EXTRA_GENERATOR_C_SYSTEM_INCLUDE_DIRS:INTERNAL=/opt/ros/indigo/include;/us
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Have symbol pthread_create
+CMAKE_HAVE_LIBC_CREATE:INTERNAL=1
+//Have include pthread.h
+CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Start directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/x/Libs/aruco/aruco-2.0.10
@@ -360,7 +560,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -403,6 +603,25 @@ CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenMP
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[-fopenmp][-fopenmp][v()]
+//Details about finding PythonInterp
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.6()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+GTEST_FROM_SOURCE_FOUND:INTERNAL=TRUE
+GTEST_FROM_SOURCE_INCLUDE_DIRS:INTERNAL=/usr/include
+GTEST_FROM_SOURCE_LIBRARIES:INTERNAL=gtest
+GTEST_FROM_SOURCE_LIBRARY_DIRS:INTERNAL=/home/x/Libs/aruco/aruco-2.0.10/build/gtest
+GTEST_FROM_SOURCE_MAIN_LIBRARIES:INTERNAL=gtest_main
+//ADVANCED property for variable: GTEST_INCLUDE_DIR
+GTEST_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GTEST_LIBRARY
+GTEST_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GTEST_LIBRARY_DEBUG
+GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GTEST_MAIN_LIBRARY
+GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
+GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
 OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT
@@ -419,4 +638,10 @@ OpenMP_CXX_FLAGS-ADVANCED:INTERNAL=1
 OpenMP_C_FLAGS-ADVANCED:INTERNAL=1
 //Test OpenMP_FLAG_DETECTED
 OpenMP_FLAG_DETECTED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_EXECUTABLE
+PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+//This needs to be in PYTHONPATH when 'setup.py install' is called.
+//  And it needs to match.  But setuptools won't tell us where
+// it will install things.
+PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
 

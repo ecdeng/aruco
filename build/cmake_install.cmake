@@ -12,7 +12,7 @@ IF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     STRING(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   ELSE(BUILD_TYPE)
-    SET(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    SET(CMAKE_INSTALL_CONFIG_NAME "Release")
   ENDIF(BUILD_TYPE)
   MESSAGE(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 ENDIF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
@@ -49,6 +49,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/x/Libs/aruco/aruco-2.0.10/build/utils/cmake_install.cmake")
   INCLUDE("/home/x/Libs/aruco/aruco-2.0.10/build/utils_markermap/cmake_install.cmake")
   INCLUDE("/home/x/Libs/aruco/aruco-2.0.10/build/utils_calibration/cmake_install.cmake")
+  INCLUDE("/home/x/Libs/aruco/aruco-2.0.10/build/aruco_ros/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

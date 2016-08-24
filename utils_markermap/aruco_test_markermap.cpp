@@ -32,8 +32,28 @@ or implied, of Rafael Muñoz Salinas.
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include "aruco.h"
+
+// %Tag(FULLTEXT)%
+// %Tag(ROS_HEADER)%
+#include "ros/ros.h"
+// %EndTag(ROS_HEADER)%
+// %Tag(MSG_HEADER)%
+#include "std_msgs/String.h"
+#include "std_msgs/Float32.h"
+#include "std_msgs/Float32MultiArray.h"
+#include "geometry_msgs/PoseStamped.h"
+#include "geometry_msgs/Vector3Stamped.h"
+
+#include "Eigen/Dense"
+#include "Eigen/Geometry"
+
+#include "MVCamera.hpp"
+
 using namespace cv;
 using namespace aruco;
+
+
+bool IsUseMindVision = false;
 
  string TheMarkerMapConfigFile;
 bool The3DInfoAvailable = false;
@@ -55,6 +75,7 @@ class CmdLineParser{int argc; char **argv; public: CmdLineParser(int _argc,char 
 void savePCDFile(string fpath,const aruco::MarkerMap &ms,const std::map<int,cv::Mat> frame_pose_map)throw(std::exception) ;
 void savePosesToFile(string filename,const std::map<int,cv::Mat> &fmp);
 
+CMVCamera MVCamera;
 /************************************
  *
  *
@@ -75,6 +96,16 @@ void processKey(char k) {
 
     }
 }
+#include <string>
+#include <limits.h>
+#include <unistd.h>
+
+std::string getexepath()
+{
+  char result[ PATH_MAX ];
+  ssize_t count = readlink( "/proc/self/exe", result, PATH_MAX );
+  return std::string( result, (count > 0) ? count : 0 );
+}
 
 /************************************
  *
@@ -82,29 +113,70 @@ void processKey(char k) {
  *
  *
  ************************************/
+using namespace cv;
+
+int test();
 int main(int argc, char **argv) {
     try {
         CmdLineParser cml(argc,argv);
         if (argc < 3|| cml["-h"]) {
             cerr << "Invalid number of arguments" << endl;
-            cerr << "Usage: (in.avi|live) marksetconfig.yml  [optional_arguments] \n\t[-c camera_intrinsics.yml] \n\t[-s marker_size] \n\t[-pcd out_pcd_file_with_camera_poses] \n\t[-poses out_file_with_poses] \n\t[-corner <corner_refinement_method> (0: LINES(default),1 SUBPIX) ][-h]" << endl;
+            cerr << "Usage: (in.avi|live) marksetconfig.yml  [optional_arguments] \n\t[-c camera_intrinsics.yml] \n\t[-s marker_size] \n\t[-pcd out_pcd_file_with_camera_poses] \n\t[-poses out_file_with_poses] \n\t[-corner <corner_refinement_method> (0: LINES(default),1 SUBPIX) ][-h] -camInx i" << endl;
             return false;
         }
-        // live ../../data/map_25A.yml -c ../../data/8.2_calib.yml -s 0.2 -pcd ../../data/pose_8.4
+        // live ../../data/map_25A.yml -c ../../data/8.2_calib.yml -s 0.2 -pcd ../../data/pose_8.4 -camInx 2
+   //     TheMarkerMapConfig.readFromFile("/home/x/Libs/aruco/aruco-2.0.10/data/map_25A.yml");
         TheMarkerMapConfig.readFromFile(argv[2]);
+
 
         TheMarkerMapConfigFile = argv[2];
          TheMarkerSize = stof( cml("-s","1"));
         // read from camera or from  file
         if (string(argv[1])== "live") {
-            TheVideoCapturer.open(0);
+            int camInx = 1;
+            if(cml["-camInx"])
+            {
+                camInx = stoi(cml("-camInx"));
+                if(camInx < 0)
+                    IsUseMindVision = true;
+            }
+
+            if(!IsUseMindVision)
+            {
+
+                TheVideoCapturer.open(camInx);
+
+                TheVideoCapturer.set(CV_CAP_PROP_FPS, 60);
+                int FPS = TheVideoCapturer.get(CV_CAP_PROP_FPS);
+                cout<<"fps= "<<FPS<<endl;
+            }
+            else
+            {                
+                MVCamera.InitMindVision();
+
+//                Mat Im;
+//                int N=100;
+//                while(N--)
+//                {
+//                    MVCamera.GetImage(Im);
+//                    imshow("1",Im);
+//                    waitKey(5);
+//                }
+
+            }
         } else TheVideoCapturer.open(argv[1]);
-        // check video is open
-        if (!TheVideoCapturer.isOpened())  throw std::runtime_error("Could not open video");
 
-        // read first image to get the dimensions
-        TheVideoCapturer >> TheInputImage;
-
+        if(!IsUseMindVision)
+        {
+            // check video is open
+            if (!TheVideoCapturer.isOpened())  throw std::runtime_error("Could not open video");
+            // read first image to get the dimensions
+            TheVideoCapturer >> TheInputImage;
+        }
+        else
+        {
+            MVCamera.GetImage(TheInputImage);
+        }
         // read camera parameters if passed
         if (cml["-c"]) {
             TheCameraParameters.readFromXMLFile(cml("-c"));
@@ -132,6 +204,24 @@ cout<<"TheCameraParameters.isValid()="<<TheCameraParameters.isValid()<<" "<<TheM
         if (TheCameraParameters.isValid() && TheMarkerMapConfig.isExpressedInMeters()  )
             TheMSPoseTracker.setParams(TheCameraParameters,TheMarkerMapConfig);
 
+        // xyz
+        // ros init
+    //    const char **argv_ros = {"",""};
+
+        ros::init(argc,argv,"aruco_pub_node");
+        ros::NodeHandle n;
+        ros::Publisher aruco_pose_pub = n.advertise<geometry_msgs::PoseStamped>("aruco_pose_topic",1000);
+        ros::Publisher aruco_info_pub = n.advertise<geometry_msgs::PoseStamped>("aruco_info_pub",1000);
+        int frame_id = 0;
+        geometry_msgs::PoseStamped aruco_pose;
+
+        double t_last = 0,t_aruco_last = 0;
+        float fps_aruco=-1,fps_video=-1;
+        int trackFailNum=0,estimateFailNum=0;
+
+        geometry_msgs::PoseStamped arucoInfo;
+        arucoInfo.header.frame_id = "Q = [fps_video, fps_aruco,trackFailNum,estimateFailNum ]";
+        arucoInfo.header.seq = 0;
 
         // Create gui
 
@@ -147,8 +237,11 @@ cout<<"TheCameraParameters.isValid()="<<TheCameraParameters.isValid()<<" "<<TheM
         int index = 0;
         // capture until press ESC or until the end of the video
         cout<<"Press 's' to start/stop video"<<endl;
+
         do {
-            TheVideoCapturer.retrieve(TheInputImage);
+            if(!IsUseMindVision)
+                TheVideoCapturer.retrieve(TheInputImage);
+
             TheInputImage.copyTo(TheInputImageCopy);
             index++; // number of images captured
             // Detection of the board
@@ -161,18 +254,120 @@ cout<<"TheCameraParameters.isValid()="<<TheCameraParameters.isValid()<<" "<<TheM
                   if ( TheMSPoseTracker.estimatePose(detected_markers)){
                      aruco::CvDrawingUtils::draw3dAxis(TheInputImageCopy,  TheCameraParameters,TheMSPoseTracker.getRvec(),TheMSPoseTracker.getTvec(),TheMarkerMapConfig[0].getMarkerSize()*2);
                      frame_pose_map.insert(make_pair(index,TheMSPoseTracker.getRTMatrix() ));
-                     cout<<"pose rt="<<TheMSPoseTracker.getRvec()<<" "<<TheMSPoseTracker.getTvec()<<endl;
-                  }
-            }
+         //            cout<<"pose rt="<<TheMSPoseTracker.getRvec()<<" "<<TheMSPoseTracker.getTvec()<<endl;
 
+
+                     // xyz
+                     // publish aruco pose
+
+                     using namespace Eigen;
+                     Eigen::Affine3f T_r2c,T_c2r;
+                     cv::Mat RT_r2c = TheMSPoseTracker.getRTMatrix();
+
+
+                      T_r2c.matrix() = Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>> (RT_r2c.ptr<float>(), RT_r2c.rows, RT_r2c.cols);
+
+          //            std::cout << "RT_r2c" << std::endl << RT_r2c << std::endl;
+         //             std::cout << "T_r2c" << std::endl << T_r2c.matrix() << std::endl;
+                     T_c2r = T_r2c.inverse();
+        //             std::cout << "T_c2r" << std::endl << T_c2r.matrix() << std::endl;
+
+
+
+                     aruco_pose.header.seq = frame_id++;
+                     aruco_pose.header.frame_id = "aruco";
+                     aruco_pose.header.stamp = ros::Time::now();
+
+                     aruco_pose.pose.position.x = T_c2r.translation()(0);
+                     aruco_pose.pose.position.y = T_c2r.translation()(1);
+                     aruco_pose.pose.position.z = T_c2r.translation()(2);
+
+                     Matrix3f R_c2r(T_r2c.linear().inverse());
+                     Eigen::Quaternionf q_r2c ( R_c2r );
+                     aruco_pose.pose.orientation.x = q_r2c.x();
+                     aruco_pose.pose.orientation.y = q_r2c.y();
+                     aruco_pose.pose.orientation.z = q_r2c.z();
+                     aruco_pose.pose.orientation.w = q_r2c.w();
+
+
+            //         std::cout << "aruco_pose" << std::endl << aruco_pose << std::endl;
+
+                     aruco_pose_pub.publish(aruco_pose);
+/*
+                     using namespace std;
+                     cout << endl;
+                     cout << TheMSPoseTracker.getRTMatrix() << endl;
+                     cout << T_r2c << endl;
+                     cout << aruco_pose_pub << endl;
+                     cout << endl;*/
+
+                     if(t_aruco_last>0)
+                     {
+                         double t_aruco_cur = aruco_pose.header.stamp.toSec();;
+                         fps_aruco = 1.0/(t_aruco_cur - t_aruco_last);
+                         t_aruco_last = t_aruco_cur;
+                     }
+                     else
+                     {
+                         t_aruco_last = aruco_pose.header.stamp.toSec();
+                         fps_aruco = -1;
+                     }
+
+
+                     estimateFailNum = 0;
+                  }
+                  else{
+                      estimateFailNum++;
+                      fps_aruco = 0;
+                  }
+                  trackFailNum = 0;
+            }
+             else{
+                 fps_aruco = 0;
+                 trackFailNum++;
+             }
+
+             //calcualte fps
+             if(t_last > 0)
+             {
+                 double t_cur = ros::Time::now().toSec();
+                 fps_video = 1/(t_cur - t_last);
+                 t_last = t_cur;
+             }
+             else
+             {
+                 t_last = ros::Time::now().toSec();
+                 fps_video = -1;
+             }
+
+
+      //       if(index % 3 == 0)
+             {
             // show input with augmented information and  the thresholded image
             cv::imshow("in", TheInputImageCopy);
             cv::imshow("thres",TheMarkerDetector.getThresholdedImage());
 
             key = cv::waitKey(waitTime); // wait for key to be pressed
             processKey(key);
+             }
 
-        } while (key != 27 && TheVideoCapturer.grab() );
+
+            arucoInfo.header.stamp = ros::Time::now();
+            arucoInfo.header.seq ++;
+            arucoInfo.pose.orientation.w = fps_video;
+            arucoInfo.pose.orientation.x = fps_aruco;
+            arucoInfo.pose.orientation.y = trackFailNum;  // always 0
+            arucoInfo.pose.orientation.z = estimateFailNum;
+            aruco_info_pub.publish(arucoInfo);
+
+/*
+            std::cout << "video_fps =" << fps_video << endl;
+            std::cout << "aruco_fps =" << fps_aruco << endl;
+            cout << "estimateFailNum = " << estimateFailNum << endl;
+            cout << "trackFailNum = " << trackFailNum << endl;
+*/
+
+        } while (key != 27 && (IsUseMindVision ? MVCamera.GetImage(TheInputImage) : TheVideoCapturer.grab()) );
 
 
 
@@ -312,3 +507,80 @@ void savePosesToFile(string filename,const std::map<int,cv::Mat> &fmp){
         }
     }
 }
+
+
+int test_Eigen();
+int test()
+{
+
+test_Eigen();
+
+}
+
+int test_Eigen()
+{
+    using namespace Eigen;
+
+
+    /* only one rotations */
+
+    Matrix3f R_b2r;
+    // counterclockwise is positive
+    //  from r to b
+    // 1) rotate around z 90 degree
+
+    R_b2r = AngleAxisf (0.5 * M_PI,Vector3f::UnitZ());
+    Quaternionf Q_r2b(R_b2r);
+    Matrix3f R_r2b = Q_r2b.toRotationMatrix().inverse();
+    Vector3f Euler_r2b = R_b2r.eulerAngles(0,1,2);
+
+
+    cout << "R_b2r = " << endl << R_b2r << endl;
+    cout << "Q_r2b = " << endl << Q_r2b.coeffs() << endl;
+    cout << "Q_r2b.w = " << Q_r2b.w() << endl;
+    cout << "R_r2b = " << endl << R_r2b << endl;
+    cout << "Euler_r2b = " << endl << Euler_r2b << endl;
+
+
+    /* multi rotations */
+    //  from r to b
+    // 1) rotate around x 30 degree
+    // 2) rotate around y -60 degree
+    // 3) rotate around z 150 degree
+    Matrix3f R_r2bone, R_bone2btwo, R_btwo2bthr;
+    R_r2bone = AngleAxisf (30.0/180 * M_PI,Vector3f::UnitX()).inverse();
+    R_bone2btwo = AngleAxisf (-60.0/180 * M_PI,Vector3f::UnitY()).inverse();
+    R_btwo2bthr = AngleAxisf (150.0/180 * M_PI,Vector3f::UnitZ()).inverse();
+
+    R_r2b = R_btwo2bthr * R_bone2btwo * R_r2bone;
+
+    // another way
+
+    R_b2r =   AngleAxisf (30.0/180 * M_PI,Vector3f::UnitX())
+            * AngleAxisf (-60.0/180 * M_PI,Vector3f::UnitY())
+            * AngleAxisf (150.0/180 * M_PI,Vector3f::UnitZ()) ;
+
+    Q_r2b = Quaternionf(R_b2r);
+
+    Quaternionf Q_r2bone(R_r2bone.transpose());
+    Quaternionf Q_bone2btwo(R_bone2btwo.transpose());
+    Quaternionf Q_btwo2bthr(R_btwo2bthr.transpose());
+
+    Quaternionf Q_r2b_Check = Q_r2bone * Q_bone2btwo * Q_btwo2bthr;
+    Matrix3f R_b2r_fromQ(Q_r2b_Check);
+    Matrix3f R_b2r_fromQ2 = Q_r2b_Check.toRotationMatrix();
+
+    Euler_r2b = R_b2r.eulerAngles(0,1,2);
+
+
+    cout << "R_r2b=" << endl << R_r2b << endl;
+    cout << "R_b2r=" << endl << R_b2r << endl;
+    cout << "Q_r2b=" << endl << Q_r2b.coeffs() << endl;
+    cout << "Q_r2b_Check=" << endl << Q_r2b_Check.coeffs() << endl;
+    cout << "Euler_r2b = " << endl << Euler_r2b * 180.0/M_PI << endl;
+    cout << "R_b2r_fromQ=" << endl << R_b2r_fromQ << endl;
+    cout << "R_b2r_fromQ2=" << endl << R_b2r_fromQ2 << endl;
+
+    return 0;
+}
+

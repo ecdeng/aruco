@@ -1,0 +1,35 @@
+<?xml version="0.1"?>
+<package>
+
+  <name>aruco</name>
+  <version>0.0.0</version>
+  <description>
+    Streaming of Aruco data to tf
+    <p>
+    This package contains a node that translates aruco data  to tf transforms.
+    </p>
+    <p>
+    Currently, this node supports aruco 2.0.10
+    </p>
+    <p>
+    Copyright (c) 2016, xyz<br/> 
+    All rights reserved.
+    </p>
+  </description>
+  <author>xyz buaaxyz@gmail.com</author>
+  <license>BSD</license>
+  <url type="website">http: ...</url>
+  <maintainer email="buaaxyz@gmail.com">xyz</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>roslaunch</build_depend>  <!-- for roslaunch_add_file_check -->
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>message_runtime</run_depend>
+</package>

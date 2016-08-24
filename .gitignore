@@ -1,0 +1,6 @@
+build/
+Release/
+install/
+Debug/
+*~
+devel/

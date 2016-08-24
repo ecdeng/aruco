@@ -7,11 +7,12 @@ FILE(GLOB srcs "*.c*")
 
 
 
-SET(detectors_src   markerlabelers/dictionary_based.cpp    markerlabelers/svmmarkers.cpp )
-SET(detectors_hdr   markerlabelers/dictionary_based.h      markerlabelers/svmmarkers.h)
+SET(detectors_src   markerlabelers/dictionary_based.cpp    markerlabelers/svmmarkers.cpp  )
+SET(detectors_hdr   markerlabelers/dictionary_based.h      markerlabelers/svmmarkers.h include_MindVision/CameraApi.h include_MindVision/CameraDefine.h include_MindVision/CameraStatus.h )
+
 
 SET(hdrs ${hdrs} ${detectors_hdr})
-SET(srcs ${srcs} ${detectors_src})
+SET(srcs ${srcs} ${detectors_src} )
 
 
 ADD_LIBRARY(${PROJECT_NAME} ${srcs} ${hdrs})
@@ -25,7 +26,7 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES 				# create *nix style library
 	OUTPUT_NAME "${PROJECT_NAME}${PROJECT_DLLVERSION}" 	# avoid conflicts between library and binary target names
 )
 
-TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${REQUIRED_LIBRARIES})
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${REQUIRED_LIBRARIES} libMVSDK.so)
 
 INSTALL(TARGETS ${PROJECT_NAME}
 	RUNTIME DESTINATION bin COMPONENT main			# Install the dll file in bin directory

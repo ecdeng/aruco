@@ -12,7 +12,7 @@ IF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     STRING(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   ELSE(BUILD_TYPE)
-    SET(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    SET(CMAKE_INSTALL_CONFIG_NAME "Release")
   ENDIF(BUILD_TYPE)
   MESSAGE(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 ENDIF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
@@ -81,6 +81,9 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "main")
     "/home/x/Libs/aruco/aruco-2.0.10/src/markerlabeler.h"
     "/home/x/Libs/aruco/aruco-2.0.10/src/markerlabelers/dictionary_based.h"
     "/home/x/Libs/aruco/aruco-2.0.10/src/markerlabelers/svmmarkers.h"
+    "/home/x/Libs/aruco/aruco-2.0.10/src/include_MindVision/CameraApi.h"
+    "/home/x/Libs/aruco/aruco-2.0.10/src/include_MindVision/CameraDefine.h"
+    "/home/x/Libs/aruco/aruco-2.0.10/src/include_MindVision/CameraStatus.h"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "main")
 

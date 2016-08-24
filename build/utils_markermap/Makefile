@@ -140,6 +140,132 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+utils_markermap/CMakeFiles/_run_tests_aruco.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/_run_tests_aruco.dir/rule
+.PHONY : utils_markermap/CMakeFiles/_run_tests_aruco.dir/rule
+
+# Convenience name for target.
+_run_tests_aruco: utils_markermap/CMakeFiles/_run_tests_aruco.dir/rule
+.PHONY : _run_tests_aruco
+
+# fast build rule for target.
+_run_tests_aruco/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/_run_tests_aruco.dir/build.make utils_markermap/CMakeFiles/_run_tests_aruco.dir/build
+.PHONY : _run_tests_aruco/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check.dir/rule
+.PHONY : utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check.dir/rule
+
+# Convenience name for target.
+_run_tests_aruco_roslaunch-check: utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check.dir/rule
+.PHONY : _run_tests_aruco_roslaunch-check
+
+# fast build rule for target.
+_run_tests_aruco_roslaunch-check/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check.dir/build.make utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check.dir/build
+.PHONY : _run_tests_aruco_roslaunch-check/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check_launch.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check_launch.dir/rule
+.PHONY : utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check_launch.dir/rule
+
+# Convenience name for target.
+_run_tests_aruco_roslaunch-check_launch: utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check_launch.dir/rule
+.PHONY : _run_tests_aruco_roslaunch-check_launch
+
+# fast build rule for target.
+_run_tests_aruco_roslaunch-check_launch/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check_launch.dir/build.make utils_markermap/CMakeFiles/_run_tests_aruco_roslaunch-check_launch.dir/build
+.PHONY : _run_tests_aruco_roslaunch-check_launch/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: utils_markermap/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_lisp: utils_markermap/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: utils_markermap/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/actionlib_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_cpp: utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_lisp: utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_py: utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 utils_markermap/CMakeFiles/aruco_create_markermap.dir/rule:
 	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/aruco_create_markermap.dir/rule
 .PHONY : utils_markermap/CMakeFiles/aruco_create_markermap.dir/rule
@@ -194,6 +320,450 @@ aruco_test_markermap: utils_markermap/CMakeFiles/aruco_test_markermap.dir/rule
 aruco_test_markermap/fast:
 	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/aruco_test_markermap.dir/build.make utils_markermap/CMakeFiles/aruco_test_markermap.dir/build
 .PHONY : aruco_test_markermap/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/clean_test_results.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/clean_test_results.dir/rule
+.PHONY : utils_markermap/CMakeFiles/clean_test_results.dir/rule
+
+# Convenience name for target.
+clean_test_results: utils_markermap/CMakeFiles/clean_test_results.dir/rule
+.PHONY : clean_test_results
+
+# fast build rule for target.
+clean_test_results/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/clean_test_results.dir/build.make utils_markermap/CMakeFiles/clean_test_results.dir/build
+.PHONY : clean_test_results/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/clean_test_results_aruco.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/clean_test_results_aruco.dir/rule
+.PHONY : utils_markermap/CMakeFiles/clean_test_results_aruco.dir/rule
+
+# Convenience name for target.
+clean_test_results_aruco: utils_markermap/CMakeFiles/clean_test_results_aruco.dir/rule
+.PHONY : clean_test_results_aruco
+
+# fast build rule for target.
+clean_test_results_aruco/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/clean_test_results_aruco.dir/build.make utils_markermap/CMakeFiles/clean_test_results_aruco.dir/build
+.PHONY : clean_test_results_aruco/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/download_extra_data.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/download_extra_data.dir/rule
+.PHONY : utils_markermap/CMakeFiles/download_extra_data.dir/rule
+
+# Convenience name for target.
+download_extra_data: utils_markermap/CMakeFiles/download_extra_data.dir/rule
+.PHONY : download_extra_data
+
+# fast build rule for target.
+download_extra_data/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/download_extra_data.dir/build.make utils_markermap/CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/doxygen.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/doxygen.dir/rule
+.PHONY : utils_markermap/CMakeFiles/doxygen.dir/rule
+
+# Convenience name for target.
+doxygen: utils_markermap/CMakeFiles/doxygen.dir/rule
+.PHONY : doxygen
+
+# fast build rule for target.
+doxygen/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/doxygen.dir/build.make utils_markermap/CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: utils_markermap/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: utils_markermap/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: utils_markermap/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: utils_markermap/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: utils_markermap/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: utils_markermap/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/roscpp_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/run_tests.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/run_tests.dir/rule
+.PHONY : utils_markermap/CMakeFiles/run_tests.dir/rule
+
+# Convenience name for target.
+run_tests: utils_markermap/CMakeFiles/run_tests.dir/rule
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/run_tests.dir/build.make utils_markermap/CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/run_tests_aruco.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/run_tests_aruco.dir/rule
+.PHONY : utils_markermap/CMakeFiles/run_tests_aruco.dir/rule
+
+# Convenience name for target.
+run_tests_aruco: utils_markermap/CMakeFiles/run_tests_aruco.dir/rule
+.PHONY : run_tests_aruco
+
+# fast build rule for target.
+run_tests_aruco/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/run_tests_aruco.dir/build.make utils_markermap/CMakeFiles/run_tests_aruco.dir/build
+.PHONY : run_tests_aruco/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check.dir/rule
+.PHONY : utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check.dir/rule
+
+# Convenience name for target.
+run_tests_aruco_roslaunch-check: utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check.dir/rule
+.PHONY : run_tests_aruco_roslaunch-check
+
+# fast build rule for target.
+run_tests_aruco_roslaunch-check/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check.dir/build.make utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check.dir/build
+.PHONY : run_tests_aruco_roslaunch-check/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check_launch.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check_launch.dir/rule
+.PHONY : utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check_launch.dir/rule
+
+# Convenience name for target.
+run_tests_aruco_roslaunch-check_launch: utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check_launch.dir/rule
+.PHONY : run_tests_aruco_roslaunch-check_launch
+
+# fast build rule for target.
+run_tests_aruco_roslaunch-check_launch/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check_launch.dir/build.make utils_markermap/CMakeFiles/run_tests_aruco_roslaunch-check_launch.dir/build
+.PHONY : run_tests_aruco_roslaunch-check_launch/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: utils_markermap/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: utils_markermap/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: utils_markermap/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: utils_markermap/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: utils_markermap/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: utils_markermap/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/std_msgs_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/tests.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/tests.dir/rule
+.PHONY : utils_markermap/CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: utils_markermap/CMakeFiles/tests.dir/rule
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/tests.dir/build.make utils_markermap/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_cpp: utils_markermap/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_lisp: utils_markermap/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_py: utils_markermap/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_cpp: utils_markermap/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/tf_generate_messages_cpp.dir/build.make utils_markermap/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : utils_markermap/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_lisp: utils_markermap/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/tf_generate_messages_lisp.dir/build.make utils_markermap/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+utils_markermap/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f CMakeFiles/Makefile2 utils_markermap/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : utils_markermap/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: utils_markermap/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/tf_generate_messages_py.dir/build.make utils_markermap/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+MVCamera.o: MVCamera.cpp.o
+.PHONY : MVCamera.o
+
+# target to build an object file
+MVCamera.cpp.o:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/aruco_test_markermap.dir/build.make utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.o
+.PHONY : MVCamera.cpp.o
+
+MVCamera.i: MVCamera.cpp.i
+.PHONY : MVCamera.i
+
+# target to preprocess a source file
+MVCamera.cpp.i:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/aruco_test_markermap.dir/build.make utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.i
+.PHONY : MVCamera.cpp.i
+
+MVCamera.s: MVCamera.cpp.s
+.PHONY : MVCamera.s
+
+# target to generate assembly for a file
+MVCamera.cpp.s:
+	cd /home/x/Libs/aruco/aruco-2.0.10/build && $(MAKE) -f utils_markermap/CMakeFiles/aruco_test_markermap.dir/build.make utils_markermap/CMakeFiles/aruco_test_markermap.dir/MVCamera.cpp.s
+.PHONY : MVCamera.cpp.s
 
 aruco_create_markermap.o: aruco_create_markermap.cpp.o
 .PHONY : aruco_create_markermap.o
@@ -321,16 +891,58 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... _run_tests_aruco"
+	@echo "... _run_tests_aruco_roslaunch-check"
+	@echo "... _run_tests_aruco_roslaunch-check_launch"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... aruco_create_markermap"
 	@echo "... aruco_markermap_pix2meters"
 	@echo "... aruco_simple_markermap"
 	@echo "... aruco_test_markermap"
+	@echo "... clean_test_results"
+	@echo "... clean_test_results_aruco"
+	@echo "... download_extra_data"
+	@echo "... doxygen"
 	@echo "... edit_cache"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... run_tests"
+	@echo "... run_tests_aruco"
+	@echo "... run_tests_aruco_roslaunch-check"
+	@echo "... run_tests_aruco_roslaunch-check_launch"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... tests"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... tf_generate_messages_py"
+	@echo "... MVCamera.o"
+	@echo "... MVCamera.i"
+	@echo "... MVCamera.s"
 	@echo "... aruco_create_markermap.o"
 	@echo "... aruco_create_markermap.i"
 	@echo "... aruco_create_markermap.s"
