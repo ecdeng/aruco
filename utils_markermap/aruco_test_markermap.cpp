@@ -53,7 +53,8 @@ using namespace cv;
 using namespace aruco;
 
 
-bool IsUseMindVision = false;
+bool IsUseMindVision = true;
+bool IsRecordVideo  = false;
 
  string TheMarkerMapConfigFile;
 bool The3DInfoAvailable = false;
@@ -121,10 +122,10 @@ int main(int argc, char **argv) {
         CmdLineParser cml(argc,argv);
         if (argc < 3|| cml["-h"]) {
             cerr << "Invalid number of arguments" << endl;
-            cerr << "Usage: (in.avi|live) marksetconfig.yml  [optional_arguments] \n\t[-c camera_intrinsics.yml] \n\t[-s marker_size] \n\t[-pcd out_pcd_file_with_camera_poses] \n\t[-poses out_file_with_poses] \n\t[-corner <corner_refinement_method> (0: LINES(default),1 SUBPIX) ][-h] -camInx i" << endl;
+            cerr << "Usage: (in.avi|live) marksetconfig.yml  [optional_arguments] \n\t[-c camera_intrinsics.yml] \n\t[-s marker_size] \n\t[-pcd out_pcd_file_with_camera_poses] \n\t[-poses out_file_with_poses] \n\t[-corner <corner_refinement_method> (0: LINES(default),1 SUBPIX) ][-h] -camInx i(<0=IsUseMindVision)" << endl;
             return false;
         }
-        // live ../../data/map_25A.yml -c ../../data/8.2_calib.yml -s 0.2 -pcd ../../data/pose_8.4 -camInx 2
+        // live ../../data/map_25A.yml -c ../../data/8.2_calib.yml -s 0.2 -pcd ../../data/pose_8.4 -camInx -1
    //     TheMarkerMapConfig.readFromFile("/home/x/Libs/aruco/aruco-2.0.10/data/map_25A.yml");
         TheMarkerMapConfig.readFromFile(argv[2]);
 
@@ -238,9 +239,18 @@ cout<<"TheCameraParameters.isValid()="<<TheCameraParameters.isValid()<<" "<<TheM
         // capture until press ESC or until the end of the video
         cout<<"Press 's' to start/stop video"<<endl;
 
+        cv::VideoWriter videoOutput;
+        if(IsRecordVideo)
+        {
+            videoOutput.open("video.avi",CV_FOURCC('D','I','V','X'),30,TheInputImage.size(),false);
+        }
+
         do {
             if(!IsUseMindVision)
                 TheVideoCapturer.retrieve(TheInputImage);
+
+            if(IsRecordVideo)
+                videoOutput << TheInputImage;
 
             TheInputImage.copyTo(TheInputImageCopy);
             index++; // number of images captured
@@ -368,7 +378,6 @@ cout<<"TheCameraParameters.isValid()="<<TheCameraParameters.isValid()<<" "<<TheM
 */
 
         } while (key != 27 && (IsUseMindVision ? MVCamera.GetImage(TheInputImage) : TheVideoCapturer.grab()) );
-
 
 
         //save a beatiful pcd file (pcl library) showing the results (you can use pcl_viewer to see it)

@@ -1,5 +1,5 @@
 
-add_executable(aruco_node "aruco_ros.cpp")
+add_executable(aruco_node "aruco_ros.cpp" "EigenLM.cpp")
 
 include_directories(. /home/x/Libs/eigen-3.3)
 

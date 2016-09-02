@@ -21,10 +21,10 @@ class ARUCO_EXPORTS Dictionary
 public:
 
     //loads from a set of predefined ones
-    enum DICT_TYPES {ARUCO,//original aruco dictionary. By default
-                     ARUCO_MIP_25h7,
-                     ARUCO_MIP_16h3,
-                     ARUCO_MIP_36h12,//*** recommended
+    enum DICT_TYPES {ARUCO,             //original aruco dictionary. By default
+                     ARUCO_MIP_25h7,   // 4
+                     ARUCO_MIP_16h3,   // 4
+                     ARUCO_MIP_36h12,//*** recommended 6
                      ARTAG,//
                      ARTOOLKITPLUS,
                      ARTOOLKITPLUSBCH,//

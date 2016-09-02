@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
             cerr<<"\t\tDictionaries: ";
             for(auto dict:dict_names)    cerr<<dict<<" ";cerr<<endl;
             return -1;
-        }
+        } // 3 marker_A.png -bs 100 -d ARUCO_MIP_36h12
         CmdLineParser cml(argc,argv);
         int pixSize = std::stoi( cml("-bs","75"));//pixel size each each bit
         //loads the desired dictionary
