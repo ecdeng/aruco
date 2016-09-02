@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/x/Libs/mocap_optitrack/build/devel/setup.sh

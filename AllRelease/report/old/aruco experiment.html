@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>aruco experiment</title>
+</head>
+<body>
+<div id="wmd-preview" class="wmd-preview"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="gu75" id="aruco-experiment">aruco experiment</h1><p data-anchor-id="7sqa"><code>aruco</code> <code>report</code></p><hr><p data-anchor-id="zlf6">(1). one point <br>
+old method, m_T_b2c=  <br>
+  -0.926919   0.0170807   -0.374872 -0.00199357 <br>
+ -0.0190464   -0.999818  0.00153894  -0.0219708 <br>
+  -0.374778  0.00856643    0.927075  -0.0335427 <br>
+          0           0           0           1 <br>
+old method, Q_b2c_old=  <br>
+-0.190934 <br>
+0.00257381 <br>
+0.981556 <br>
+0.00920146</p><p data-anchor-id="9fqv">Read m_T_r2w from bag successfully:  <br>
+    -0.9989  -0.0391287   0.0258701     -1.5058 <br>
+ -0.0392331    0.999224 -0.00354114     1.50643 <br>
+ -0.0257114 -0.00455221    -0.99966     3.10447 <br>
+          0           0           0           1 <br>
+Q_r2w =  <br>
+-0.0195959 <br>
+0.999722 <br>
+-0.0020239 <br>
+-0.0128989</p><hr><div class="md-section-divider"></div><h2 data-anchor-id="1bee" id="21-4-points-old-method">(2.1). 4 points old method</h2><div class="md-section-divider"></div><h3 data-anchor-id="6cdk" id="mtr2w">m_T_r2w =</h3><p data-anchor-id="n2hp">-0.998901  -0.0391287     0.02587     -1.5058 <br>
+ -0.0392331    0.999224 -0.00354115     1.50643 <br>
+ -0.0257114 -0.00455221    -0.99966     3.10447 <br>
+          0           0           0           1 <br>
+Q_r2w = -0.0195959   0.999722 -0.0020239 -0.0128989          </p><div class="md-section-divider"></div><h3 data-anchor-id="po8k" id="mtb2c">m_T_b2c =</h3><p data-anchor-id="pbli">0.757396 0.000857174   -0.652956 0.000762486 <br>
+   0.638758   -0.208374    0.740654  -0.0120939 <br>
+  -0.135424   -0.978049   -0.158369  -0.0353882 <br>
+          0           0           0           1 <br>
+old method, Q_b2c_old=  0.728721  0.219431 -0.270467   0.58963 <br>
+t_err = -4.67449e-05 -2.71648e-05 -2.50842e-05</p><div class="md-section-divider"></div><h3 data-anchor-id="lf9l" id="tdiserr-000804598">t_dis_err = 0.00804598</h3><p data-anchor-id="6r72">q_w_err = 0.44013</p><hr><div class="md-section-divider"></div><h2 data-anchor-id="6xa2" id="22-4-points-new-method">(2.2) 4 points new method</h2><p data-anchor-id="geva">Q_b2c = 0.727843 0.213432 -0.26448 0.595602</p><div class="md-section-divider"></div><h3 data-anchor-id="yabm" id="new-method-mtb2c">new method, m_T_b2c=</h3><p data-anchor-id="lqxd">0.768995 -0.00436017    -0.63924  0.00413347 <br>
+   0.625739    -0.19941    0.754113  -0.0117919 <br>
+  -0.130759   -0.979906   -0.150617  -0.0102522 <br>
+          0           0           0           1 <br>
+Q_r2w_f =   0.0287443   -0.999544 -0.00123447  0.00913661</p><div class="md-section-divider"></div><h3 data-anchor-id="i277" id="tr2w">T_r2w =</h3><p data-anchor-id="h0si">-0.998181 -0.0574849  0.0181939   -1.49516 <br>
+-0.0574398   0.998344 0.00299307    1.49164 <br>
+-0.0183359 0.00194257   -0.99983    3.08376 <br>
+         0          0          0          1 <br>
+t_err = -1.41319e-05 -0.000399172   0.00136891</p><div class="md-section-divider"></div><h3 data-anchor-id="logc" id="tdiserr-000707066">t_dis_err = 0.00707066</h3><p data-anchor-id="74wv">q_w_err = 0.424745</p><hr><div class="md-section-divider"></div><h2 data-anchor-id="209y" id="31-4-points-time-aligned-old-method">(3.1) 4 points time aligned old method</h2><p data-anchor-id="aavz">old method, m_T_b2c=  <br>
+  0.763021  0.0118839  -0.646264 0.00568127 <br>
+  0.633613  -0.211437   0.744197 -0.0125557 <br>
+   -0.1278  -0.977319  -0.168861 -0.0381627 <br>
+         0          0          0          1 <br>
+old method, Q_b2c_old=  0.732004  0.220455 -0.264365  0.587946 <br>
+t_err = -1.51014e-06  7.79331e-06 -3.40804e-05 <br>
+t_dis_err = 0.00507192 <br>
+q_w_err = 0.75666</p><div class="md-section-divider"></div><h2 data-anchor-id="y1rg" id="32-4-points-time-aligned-new-method">(3.2) 4 points time aligned new method</h2><p data-anchor-id="qdh2">Q_b2c =  0.734794  0.207278 -0.264211  0.589327 <br>
+new method, m_T_b2c=  <br>
+   0.774456 -0.00679974   -0.632591   0.0165497 <br>
+   0.616027   -0.219459    0.756537  -0.0147104 <br>
+  -0.143972   -0.975598   -0.165773  -0.0406962 <br>
+          0           0           0           1 <br>
+Q_r2w_f =  0.0268283  -0.999609 0.00770722 0.00154205 <br>
+T_r2w =  <br>
+ -0.998555 -0.0536118 0.00349644   -1.47927 <br>
+-0.0536594   0.998442 -0.0153257    1.51516 <br>
+-0.00266935 -0.0154911  -0.999876    3.10411 <br>
+         0          0          0          1 <br>
+t_err =  0.000460471 -0.000255302 -7.32923e-05 <br>
+t_dis_err = 0.00360354 <br>
+q_w_err = 0.406863</p><div class="md-section-divider"></div><h2 data-anchor-id="9c3a" id="41-20-p-t-a">(4.1) 20 p t a</h2><p data-anchor-id="des8">Normalized m_T_r2w =  <br>
+  -0.998899  -0.0391286   0.0258701     -1.5058 <br>
+ -0.0392331    0.999224 -0.00354114     1.50643 <br>
+ -0.0257114  -0.0045522   -0.999659     3.10447 <br>
+          0           0           0           1 <br>
+old method, m_T_b2c=  <br>
+    0.758959   0.00339696    -0.651129 -0.000672623 <br>
+    0.637004    -0.211097     0.741393   -0.0137532 <br>
+   -0.134933    -0.977459    -0.162378   -0.0335984 <br>
+           0            0            0            1 <br>
+old method, Q_b2c_old=  0.730143  0.219273 -0.269147  0.588533 <br>
+t_err = -6.18724e-06  -5.3069e-05 -2.22763e-05 <br>
+t_dis_err = 0.0265192 <br>
+q_w_err = 0.904428</p><div class="md-section-divider"></div><h2 data-anchor-id="3uk6" id="42-20-ps-time-aligned">(4.2) 20 ps time aligned</h2><p data-anchor-id="hne6">Q_b2c =  0.733714  0.208688 -0.263297  0.590582 <br>
+new method, m_T_b2c=  <br>
+   0.774247 -0.00476225   -0.632865  0.00600346 <br>
+   0.617233   -0.215324    0.756743  -0.0024312 <br>
+  -0.139875   -0.976531   -0.163775  -0.0329259 <br>
+          0           0           0           1 <br>
+Q_r2w_f =  0.0314192  -0.999471 0.00354089 0.00764719 <br>
+T_r2w =  <br>
+  -0.997909  -0.0627509   0.0155088    -1.49689 <br>
+ -0.0628593    0.998001  -0.0065975     1.52196 <br>
+ -0.0150638 -0.00755857   -0.999858      3.0966 <br>
+          0           0           0           1 <br>
+t_err = 0.000376217 -0.00128092 0.000431755 <br>
+t_dis_err = 0.0262425 <br>
+q_w_err = 0.853033</p></div>
+</body>
+</html>
