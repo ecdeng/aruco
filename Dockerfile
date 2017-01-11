@@ -43,3 +43,5 @@ RUN cd /aruco && \
         .. && \
     /ros_entrypoint.sh make -j$(nproc)
 
+WORKDIR /aruco
+CMD ["fish"]
