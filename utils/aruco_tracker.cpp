@@ -74,7 +74,9 @@ int main(int argc, char **argv) {
         //Set the dictionary you want to work with, if you included option -d in command line
         //see dictionary.h for all types
         if (cml["-d"])  MDetector.setDictionary( cml("-d"),0.f);
-
+    
+        int delay = 0;
+        char key = 0;
         do{
             vreader.retrieve(InImage);
             // Ok, let's detect
@@ -97,7 +99,13 @@ int main(int argc, char **argv) {
             // show input with augmented information
             cv::namedWindow("in", 1);
             cv::imshow("in", InImage);
-        } while( char(cv::waitKey(0))!=27 && vreader.grab()); // wait for esc to be pressed
+
+            // play continuously if we press 's', abort on esc
+            key = char(cv::waitKey(delay));
+            if (key == 115) // key is 's'
+                delay = (delay == 0) ? 15 : 0;
+
+        } while( key != 27 && vreader.grab()); // wait for esc to be pressed
 
 
         if (cml["-o"]) cv::imwrite(cml("-o"), InImage);
