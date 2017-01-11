@@ -89,7 +89,6 @@ int main(int argc, char **argv) {
             cerr << "Usage: (in.avi|live) out_camera_calibration.yml  [-m markermapConfig.yml (configuration of the board. If use default one (in utils), no need to set this)]    [-size <float> :(value in meters of a marker. If you provide a board that contains that information, this is ommited) ] " << endl;
             return -1;
         }
-        // video.avi Mindvision_8.24.yml -m mapA4_34_Config_meters.yml -size 0.05
         // parse arguments
         //load marker info from file if indicated
         if (cml["-m"]) TheMarkerMapConfig.readFromFile( cml("-m"));
@@ -105,7 +104,7 @@ int main(int argc, char **argv) {
             TheMarkerMapConfig=TheMarkerMapConfig.convertToMeters(atof(cml("-size").c_str()));
         // read from camera or from  file
         if (string(argv[1]) == "live") {
-            TheVideoCapturer.open(1);
+            TheVideoCapturer.open(0);
          }
         else     TheVideoCapturer.open(argv[1]);
         // check video is open

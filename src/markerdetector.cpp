@@ -35,7 +35,9 @@ or implied, of Rafael Muñoz Salinas.
 #include <fstream>
 #include <valarray>
 #include "ar_omp.h"
+#include "checkrectcontour.h"
 #include "markerlabeler.h"
+#include "cameraparameters.h"
 using namespace std;
 using namespace cv;
 
@@ -116,7 +118,7 @@ void MarkerDetector::detect(const cv::Mat &input, std::vector< Marker > &detecte
  ************************************/
 void MarkerDetector::detect(const cv::Mat &input, vector< Marker > &detectedMarkers, Mat camMatrix, Mat distCoeff, float markerSizeMeters,
                             bool setYPerpendicular) throw(cv::Exception) {
-
+//omp_set_num_threads(1);
     // it must be a 3 channel image
     if (input.type() == CV_8UC3)
         cv::cvtColor(input, grey, CV_BGR2GRAY);
@@ -150,11 +152,11 @@ void MarkerDetector::detect(const cv::Mat &input, vector< Marker > &detectedMark
     vector<int> p1_values;
     for(int i=std::max(3.,_params._thresParam1-2*_params._thresParam1_range);i<=_params._thresParam1+2*_params._thresParam1_range;i+=2)p1_values.push_back(i);
     thres_images.resize(p1_values.size());
-#pragma omp parallel for
+ #pragma omp parallel for
     for (int i = 0; i < int(p1_values.size()); i++)
         thresHold(_params._thresMethod, imgToBeThresHolded, thres_images[i], p1_values[i], _params._thresParam2);
     thres = thres_images[n_param1 / 2];
-    //
+     //
 
 
      // find all rectangles in the thresholdes image
@@ -202,12 +204,9 @@ void MarkerDetector::detect(const cv::Mat &input, vector< Marker > &detectedMark
                 candidates_omp[omp_get_thread_num()].push_back(MarkerCanditates[i]);
         }
     }
-    // unify parallel data
+     // unify parallel data
     joinVectors(markers_omp, detectedMarkers, true);
     joinVectors(candidates_omp, _candidates, true);
-
-
-
 
 
 
@@ -279,33 +278,7 @@ void MarkerDetector::detect(const cv::Mat &input, vector< Marker > &detectedMark
 //    cerr << "Subpixel: " << 1000*(t5 - t4) / double(cv::getTickFrequency()) << endl;
 //    cerr << "Filtering: " << 1000*(t6 - t5) / double(cv::getTickFrequency()) << endl;
 }
-struct   PointSet_2D:public std::vector<cv::Point2f>
-{
-    // Must return the number of data points
-    inline size_t kdtree_get_point_count() const { return   size(); }
-    // Returns the distance between the vector "p1[0:size-1]" and the data point with index "idx_p2" stored in the class:
-    inline float kdtree_distance(const float *p1, const size_t idx_p2,size_t size) const
-    {
-        (void)(size);
-        const float d0=p1[0]-at(idx_p2).x;
-        const float d1=p1[1]-at(idx_p2).y;
-        return d0*d0+d1*d1;
-    }
 
-    // Returns the dim'th component of the idx'th point in the class:
-    // Since this is inlined and the "dim" argument is typically an immediate value, the
-    //  "if/else's" are actually solved at compile time.
-    inline float kdtree_get_pt(const size_t idx, int dim) const
-    {
-         return  dim==0? at(idx).x:at(idx).y;
-    }
-
-    // Optional bounding-box computation: return false to default to a standard bbox computation loop.
-    //   Return true if the BBOX was already computed by the class and returned in "bb" so it can be avoided to redo it again.
-    //   Look at bb.size() to find out the expected dimensionality (e.g. 2 or 3 for point clouds)
-    template <class BBOX>
-    bool kdtree_get_bbox(BBOX &bb) const { return false; }
-};
 
 
 /************************************
@@ -326,14 +299,17 @@ void MarkerDetector::detectRectangles(const cv::Mat &thres, vector< std::vector<
 }
 
 void MarkerDetector::detectRectangles(vector< cv::Mat > &thresImgv, vector< MarkerCandidate > &OutMarkerCanditates) {
-    //         omp_set_num_threads ( 1 );
+            // omp_set_num_threads ( 1 );
     vector< vector< MarkerCandidate > > MarkerCanditatesV(omp_get_max_threads());
     // calcualte the min_max contour sizes
-    //int minSize = _params._minSize * std::max(thresImgv[0].cols, thresImgv[0].rows) * 4;
-    int maxSize = _params._maxSize * std::max(thresImgv[0].cols, thresImgv[0].rows) * 4;
+    int maxSize =  _params._maxSize * std::max(thresImgv[0].cols, thresImgv[0].rows) * 4;
     int minSize=  std::min ( float(_params._minSize_pix) , _params._minSize* std::max(thresImgv[0].cols, thresImgv[0].rows) * 4 );
-//         cv::Mat input;
-//         cv::cvtColor ( thresImgv[0],input,CV_GRAY2BGR );
+//#define _aruco_debug_detectrectangles
+#ifdef _aruco_debug_detectrectangles
+         cv::Mat input;
+         cv::cvtColor ( thresImgv[0],input,CV_GRAY2BGR );
+#endif
+
 #pragma omp parallel for
     for (int img_idx = 0; img_idx < int(thresImgv.size()); img_idx++) {
         std::vector< cv::Vec4i > hierarchy2;
@@ -341,48 +317,48 @@ void MarkerDetector::detectRectangles(vector< cv::Mat > &thresImgv, vector< Mark
         cv::Mat thres2;
         thresImgv[img_idx].copyTo(thres2);
         cv::findContours(thres2, contours2, hierarchy2, CV_RETR_LIST, CV_CHAIN_APPROX_NONE);
-
         vector< Point > approxCurve;
         /// for each contour, analyze if it is a paralelepiped likely to be the marker
         for (unsigned int i = 0; i < contours2.size(); i++) {
 
             // check it is a possible element by first checking is has enough points
             if (minSize < int(contours2[i].size()) && int(contours2[i].size()) < maxSize) {
+                // can approximate to a convex rect?
+                //specific method
+                //approxCurve=CheckRectContour::getConvexRect(contours2[i]);
+                //general one
                 // approximate to a poligon
-                approxPolyDP(contours2[i], approxCurve, double(contours2[i].size()) * 0.05, true);
-                // 				drawApproxCurve(copy,approxCurve,Scalar(0,0,255));
-                // check that the poligon has 4 points
-                if (approxCurve.size() == 4) {
-                    /*
-                                            drawContour ( input,contours2[i],Scalar ( 255,0,225 ) );
-                                            namedWindow ( "input" );
-                                            imshow ( "input",input );*/
-                    //  	 	waitKey(0);
-                    // and is convex
-                    if (isContourConvex(Mat(approxCurve))) {
-                        // 					      drawApproxCurve(input,approxCurve,Scalar(255,0,255));
-                        // 						//ensure that the   distace between consecutive points is large enough
-                        float minDist = 1e10;
-                        for (int j = 0; j < 4; j++) {
-                            float d = std::sqrt((float)(approxCurve[j].x - approxCurve[(j + 1) % 4].x) * (approxCurve[j].x - approxCurve[(j + 1) % 4].x) +
-                                                (approxCurve[j].y - approxCurve[(j + 1) % 4].y) * (approxCurve[j].y - approxCurve[(j + 1) % 4].y));
-                            // 		norm(Mat(approxCurve[i]),Mat(approxCurve[(i+1)%4]));
-                            if (d < minDist) minDist = d;
-                        }
-                        // check that distance is not very small
-                        if (minDist > 10) {
-                            // add the points
-                            // 	      cout<<"ADDED"<<endl;
-                            MarkerCanditatesV[omp_get_thread_num()].push_back(MarkerCandidate());
-                            MarkerCanditatesV[omp_get_thread_num()].back().idx = i;
-                            if (_params._cornerMethod==LINES)//save all contour points if you need lines refinement method
-                                MarkerCanditatesV[omp_get_thread_num()].back().contour = contours2[i];
-                            for (int j = 0; j < 4; j++)
-                                MarkerCanditatesV[omp_get_thread_num()].back().push_back(Point2f(approxCurve[j].x, approxCurve[j].y));
-                        }
+                 approxPolyDP(contours2[i], approxCurve, double(contours2[i].size()) * 0.05, true);
+
+
+                if (approxCurve.size() == 4 && isContourConvex(approxCurve))
+                {
+
+#ifdef _aruco_debug_detectrectangles
+                                              drawApproxCurve(input,approxCurve,Scalar(255,0,255));
+#endif
+                    // ensure that the   distace between consecutive points is large enough
+                    float minDist = 1e10;
+                    for (int j = 0; j < 4; j++) {
+                        float d = std::sqrt((float)(approxCurve[j].x - approxCurve[(j + 1) % 4].x) * (approxCurve[j].x - approxCurve[(j + 1) % 4].x) +
+                                (approxCurve[j].y - approxCurve[(j + 1) % 4].y) * (approxCurve[j].y - approxCurve[(j + 1) % 4].y));
+                        // 		norm(Mat(approxCurve[i]),Mat(approxCurve[(i+1)%4]));
+                        if (d < minDist) minDist = d;
+                    }
+                    // check that distance is not very small
+                    if (minDist > 10) {
+                        // add the points
+                        // 	      cout<<"ADDED"<<endl;
+                        MarkerCanditatesV[omp_get_thread_num()].push_back(MarkerCandidate());
+                        MarkerCanditatesV[omp_get_thread_num()].back().idx = i;
+                        if (_params._cornerMethod==LINES)//save all contour points if you need lines refinement method
+                            MarkerCanditatesV[omp_get_thread_num()].back().contour = contours2[i];
+                        for (int j = 0; j < 4; j++)
+                            MarkerCanditatesV[omp_get_thread_num()].back().push_back(Point2f(approxCurve[j].x, approxCurve[j].y));
                     }
                 }
             }
+
         }
     }
 
@@ -457,13 +433,15 @@ void MarkerDetector::detectRectangles(vector< cv::Mat > &thresImgv, vector< Mark
         }
     }
 
-    /*
+#ifdef _aruco_debug_detectrectangles
+
             for ( size_t i=0; i<OutMarkerCanditates.size(); i++ )
                     OutMarkerCanditates[i].draw ( input,cv::Scalar ( 124,  255,125 ) );
 
 
-            namedWindow ( "input" );
-            imshow ( "input",input );*/
+            namedWindow ( "_aruco_debug_detectrectangles" );
+            imshow ( "_aruco_debug_detectrectangles",input );
+#endif
 }
 
 /************************************

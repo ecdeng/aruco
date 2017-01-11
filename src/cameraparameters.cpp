@@ -146,6 +146,7 @@ void CameraParameters::resize(cv::Size size) throw(cv::Exception) {
     CameraMatrix.at< float >(0, 2) *= AxFactor;
     CameraMatrix.at< float >(1, 1) *= AyFactor;
     CameraMatrix.at< float >(1, 2) *= AyFactor;
+    CamSize=size;
 }
 
 /****

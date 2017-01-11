@@ -31,13 +31,13 @@ or implied, of Rafael Muñoz Salinas.
 #include <cstdio>
 #include <iostream>
 #include "exports.h"
-#include "cameraparameters.h"
 #include "dictionary.h"
 #include "marker.h"
 #include "markerlabeler.h"
 using namespace std;
 
 namespace aruco {
+class CameraParameters;
 /**\brief Main class for marker detection
  *
  */
@@ -89,7 +89,7 @@ public:
             _thresParam1_range = 0;
             _markerWarpSize = 56;
 
-            _minSize = 0.04;_maxSize = 0.5;_minSize_pix=25;
+            _minSize = 0.04;_maxSize = 0.95;_minSize_pix=25;
             _borderDistThres = 0.005; // corners at a distance from image boundary nearer than 2.5% of image are ignored
             _subpix_wsize=5;//window size employed for subpixel search (in vase you use _cornerMethod=SUBPIX
         }

@@ -126,6 +126,7 @@ int main(int argc, char **argv) {
         //set specific parameters for this configuration
          MarkerDetector::Params params;
         params._borderDistThres=.01;//acept markers near the borders
+        params._maxSize=0.9;
         params._thresParam1=5;
         params._thresParam1_range=10;//search in wide range of values for param1
         params._cornerMethod=MarkerDetector::SUBPIX;//use subpixel corner refinement
@@ -151,7 +152,7 @@ int main(int argc, char **argv) {
                 vector<aruco::Marker> detected_markers=TheMarkerDetector.detect(TheInputImage);
                 vector<int> markers_from_set=TheMarkerMapConfig.getIndices(detected_markers);
                 TheInputImage.copyTo(TheInputImageCopy);
-                for(auto idx:markers_from_set) detected_markers[idx].draw(TheInputImageCopy, Scalar(0, 0, 255), 1);
+                for(auto idx:markers_from_set) detected_markers[idx].draw(TheInputImageCopy, Scalar(0, 0, 255), std::max(float(1.f),1.5f*float(TheInputImageCopy.cols)/1000.f));
 
 
                 if (TheInputImageCopy.cols>1280 )

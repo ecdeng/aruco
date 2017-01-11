@@ -45,8 +45,6 @@ int main(int argc, char **argv) {
             cerr<<"\tDictionaries: "; for(auto dict:aruco::Dictionary::getDicTypes())    cerr<<dict<<" ";cerr<<endl;
             return -1;
         }
-        // 4:4 ARUCO_MIP_36h12_4_4.png ARUCO_MIP_36h12_4_4_pix.yml -d ARUCO_MIP_36h12 -s 1000 -t 1
-        // 1:1 ARUCO_MIP_36h12_5.png ARUCO_MIP_36h12_5_pix.yml -d ARUCO_MIP_36h12 -s 1000 -t 1
         int XSize, YSize;
         if (sscanf(argv[1], "%d:%d", &XSize, &YSize) != 2) {
             cerr << "Incorrect X:Y specification" << endl;
@@ -72,7 +70,6 @@ int main(int argc, char **argv) {
         std::random_shuffle(ids.begin(),ids.end());
         //take the required ones
         ids.resize(XSize*YSize);
-        ids[0] = 0;
         aruco::MarkerMap BInfo=Dict.createMarkerMap(Size(XSize, YSize), pixSize, pixSize * interMarkerDistance,ids,typeMarkerMap==1);
         //create a printable image to save
         cv::Mat MarkerMapImage=BInfo.getImage();

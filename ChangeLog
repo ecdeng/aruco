@@ -1,5 +1,22 @@
+Version 2.0.16
+  - corrected bug in MSVC compilation due to linking problems
+
+Version 2.0.15
+  - corrected bug in MarkerDetector::detectRectangles. The check isContourConvex was removed at some point and has now been set again
+Version 2.0.14
+  - corrected bug in dictionary.cpp with ARUCO_MIP_25h7
+Version 2.0.13
+  - corrected bug in MSVC
+Version 2.0.12
+  - bug corrected in CameraParameters::resize
+
+Version 2.0.11
+  - improved marker::draw to cope better with large images
+  - possible bug in rectangle detection found.
 Version 2.0.10
   - bug corrected in  aruco_print_dictionary
+  - bug corrected in markermap  (        if ( it!=m_meters.end())  )
+
 Version 2.0.9
   - bug corrected in MarkerPoseTracker relative to the refence system. The reference system of the markers computed using the Marker::calculateExtrinsics was different from the ne of MarkerPoseTracker. Now, the one 
   from MarkerPoseTRacker is the wining, since it is the same as the twin library markermapper.

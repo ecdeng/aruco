@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
         if (argc < 4) {
             cerr << "Usage:  in_boardConfiguration.yml markerSize_meters out_boardConfiguration.yml" << endl;
             return -1;
-        } // ARUCO_MIP_25h7_1_pix.yml 0.2  ARUCO_MIP_25h7_1_meters.yml
+        }
         aruco::MarkerMap BInfo;
         BInfo.readFromFile(argv[1]);
         BInfo.convertToMeters(atof(argv[2])).saveToFile(argv[3]);

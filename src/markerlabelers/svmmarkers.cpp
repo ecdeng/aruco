@@ -46,7 +46,7 @@ class SVMMarkers  {
     float _minFeatureValue, _maxFeatureValue; // image range for svm classification
     int _patchSize, _dictSize; // marker pathSize (total features = pathSize^2) and dictionary size (number of markers)
     bool _rotateMarkers; // interchange rotation 1 and 3 ??
-#ifdef OPENCV_VERSION_3
+#if  CV_VERSION_MAJOR >= 3
     cv::Ptr<cv::ml::SVM>  _model;
 #else
     cv::Ptr<CvSVM>  _model  ;
@@ -68,7 +68,7 @@ public:
     if (path.empty())return false;
 
 
-#ifdef OPENCV_VERSION_3
+#if  CV_VERSION_MAJOR >= 3
     _model= cv::ml::StatModel::load<cv::ml::SVM>(path);
      _patchSize=sqrt(_model->getSupportVectors().size().width);
 
@@ -132,7 +132,7 @@ public:
         dataRow = greyResizedNormalized.reshape(1,1);
 
         // predict id with svm
-#ifdef OPENCV_VERSION_3
+#if  CV_VERSION_MAJOR >= 3
         int predict_id = (int)_model->predict(dataRow);
 #else
         int predict_id = (int)_model->predict(dataRow, true);

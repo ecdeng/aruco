@@ -4,7 +4,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 PROJECT(aruco)
-set(PROJECT_VERSION "2.0.9")
+set(PROJECT_VERSION "2.0.15")
 string(REGEX MATCHALL "[0-9]" PROJECT_VERSION_PARTS "${PROJECT_VERSION}")
 list(GET PROJECT_VERSION_PARTS 0 PROJECT_VERSION_MAJOR)
 list(GET PROJECT_VERSION_PARTS 1 PROJECT_VERSION_MINOR)
@@ -49,25 +49,21 @@ OPTION(BUILD_GLSAMPLES 	"Set to OFF to build static libraries" OFF)
 # ----------------------------------------------------------------------------
 
 FIND_PACKAGE(OpenCV 	REQUIRED )
-set (REQUIRED_LIBRARIES ${OpenCV_LIBS})
+set (ARUCO_REQUIRED_LIBRARIES ${OpenCV_LIBS})
 INCLUDE_DIRECTORIES(${OpenCV_INCLUDE_DIRS})
 
 if(OpenCV_VERSION VERSION_LESS "3.0")#Opencv 2 requires the ad-hoc levmarq method for tracking since solvePnp from intrinsicguess does not work
-    IF(NOT USE_OWN_EIGEN3)
-        find_package( Eigen3 REQUIRED )
-    ELSE()
-        set(EIGEN3_INCLUDE_DIR "3rdparty/eigen3")
-    ENDIF()
-    include_directories( ${EIGEN3_INCLUDE_DIR} )
-
     IF(USE_DOUBLE_PRECISION_PNP)
         ADD_DEFINITIONS(-DDOUBLE_PRECISION_PNP)
     ENDIF()
-ELSE()
-    ADD_DEFINITIONS(-DOPENCV_VERSION_3)
 ENDIF()
 
-
+IF(NOT USE_OWN_EIGEN3)
+    find_package( Eigen3 REQUIRED )
+ELSE()
+    set(EIGEN3_INCLUDE_DIR "3rdparty/eigen3")
+ENDIF()
+include_directories( ${EIGEN3_INCLUDE_DIR} )
 
 # Check if we have OpenCV 3
 
@@ -155,8 +151,7 @@ set(EXTRA_C_FLAGS_DEBUG "")
 set(EXTRA_EXE_LINKER_FLAGS "")
 set(EXTRA_EXE_LINKER_FLAGS_RELEASE "")
 set(EXTRA_EXE_LINKER_FLAGS_DEBUG "")
-
-IF(CMAKE_COMPILER_IS_GNUCXX OR MINGW)
+IF(CMAKE_COMPILER_IS_GNUCXX OR MINGW OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     set(ENABLE_PROFILING 		OFF CACHE BOOL "Enable profiling in the GCC compiler (Add flags: -g -pg)")
     set(USE_OMIT_FRAME_POINTER 	ON CACHE BOOL "Enable -fomit-frame-pointer for GCC")
     if(${CMAKE_SYSTEM_PROCESSOR} MATCHES arm*) # We can use only -O2 because the -O3 causes gcc crash
@@ -271,7 +266,6 @@ IF(BUILD_UTILS)
   ADD_SUBDIRECTORY(utils)
   ADD_SUBDIRECTORY(utils_markermap)
   ADD_SUBDIRECTORY(utils_calibration)
-  add_subdirectory(aruco_ros)
 #  ADD_SUBDIRECTORY(utils_svm)
 ENDIF()
 IF(GL_FOUND AND BUILD_GLSAMPLES)

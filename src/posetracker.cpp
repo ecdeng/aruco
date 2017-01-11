@@ -1,6 +1,6 @@
 #include <opencv2/calib3d/calib3d.hpp>
 #include "posetracker.h"
-#ifndef OPENCV_VERSION_3
+#if CV_VERSION_MAJOR == 2
 #include "levmarq.h"
 #endif
 #include "ippe.h"
@@ -33,7 +33,7 @@ void impl__aruco_getRTfromMatrix44 ( const cv::Mat &M,  cv::Mat &R,cv::Mat &T ) 
         for ( int i=0; i<3; i++ )
             T.ptr<double> ( 0 ) [i]=M.at<double> ( i,3 );
 }
-#ifndef OPENCV_VERSION_3
+#if  CV_VERSION_MAJOR == 2
 
 template<typename T>
 double __aruco_solve_pnp(const std::vector<cv::Point3f> & p3d,const std::vector<cv::Point2f> & p2d,const cv::Mat &cam_matrix,const cv::Mat &dist,cv::Mat &r_io,cv::Mat &t_io){
@@ -115,7 +115,7 @@ bool MarkerPoseTracker::estimatePose(  Marker &m,const   CameraParameters &_cam_
         impl__aruco_getRTfromMatrix44(solutions[0].first,rv,tv);
      }
     else{
-#ifdef OPENCV_VERSION_3
+#if  CV_VERSION_MAJOR >= 3
         cv::solvePnP(Marker::get3DPoints(_msize),m,_cam_params.CameraMatrix,_cam_params.Distorsion,_rvec,_tvec,true);
 #else //solve Pnp does not work properly in OpenCV2
         __aruco_solve_pnp(Marker::get3DPoints(_msize),m,_cam_params.CameraMatrix,_cam_params.Distorsion,_rvec,_tvec);
@@ -195,7 +195,7 @@ bool MarkerMapPoseTracker::estimatePose(const  vector<Marker> &v_m){
             }
         }
 
-#ifdef OPENCV_VERSION_3
+#if  CV_VERSION_MAJOR >= 3
         cv::solvePnP(p3d,p2d,_cam_params.CameraMatrix,_cam_params.Distorsion,_rvec,_tvec,true);
 
 #else //SolvePnP does not work properly in opencv 2

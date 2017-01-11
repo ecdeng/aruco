@@ -1,13 +1,13 @@
 #include "dictionary_based.h"
 #include <bitset>
 #include <opencv2/imgproc/imgproc.hpp>
-
-
+#include <bitset>
+#include <cmath>
 namespace aruco{
 
 void DictionaryBased::setParams(const Dictionary &dic,float max_correction_rate){
     _dic=dic;
-    max_correction_rate=max(0.f,min(1.0f,max_correction_rate));
+    max_correction_rate=std::max(0.f,std::min(1.0f,max_correction_rate));
     _maxCorrectionAllowed=float(_dic.tau())*max_correction_rate;
 
 }
@@ -18,7 +18,7 @@ std::string DictionaryBased::getName()const{
 
 void DictionaryBased::toMat(uint64_t code,int nbits_sq,cv::Mat  &out) {
     out.create(nbits_sq,nbits_sq,CV_8UC1);
-    bitset<64> bs(code);
+    std::bitset<64> bs(code);
     int curbit=0;
     for(int r=0;r<nbits_sq;r++){
         uchar *pr=out.ptr<uchar>(r);
@@ -48,7 +48,7 @@ bool DictionaryBased::detect(const cv::Mat &in, int & marker_id,int &nRotations)
     // threshold image
     cv::threshold(grey, grey, 125, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
 
-     vector<uint64_t> ids;
+     std::vector<uint64_t> ids;
     //get the ids in the four rotations (if possible)
     if ( !getInnerCode( grey,_dic.nbits(),ids)) return false;
 
@@ -79,7 +79,7 @@ bool DictionaryBased::detect(const cv::Mat &in, int & marker_id,int &nRotations)
 
  }
 
- bool DictionaryBased::getInnerCode(const cv::Mat &thres_img,int total_nbits,vector<uint64_t> &ids){
+ bool DictionaryBased::getInnerCode(const cv::Mat &thres_img,int total_nbits,std::vector<uint64_t> &ids){
      int bits_a=sqrt(total_nbits);
     int bits_a2=bits_a+2;
     // Markers  are divided in (bits_a+2)x(bits_a+2) regions, of which the inner bits_axbits_a belongs to marker info

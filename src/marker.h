@@ -69,7 +69,7 @@ class ARUCO_EXPORTS Marker : public std::vector< cv::Point2f > {
 
     /**Draws this marker in the input image
      */
-    void draw(cv::Mat &in, cv::Scalar color, int lineWidth = 1, bool writeId = true) const;
+    void draw(cv::Mat &in, cv::Scalar color, int lineWidth = -1, bool writeId = true) const;
 
     /**Calculates the extrinsics (Rvec and Tvec) of the marker with respect to the camera
      * @param markerSize size of the marker side expressed in meters

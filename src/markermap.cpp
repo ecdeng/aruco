@@ -402,8 +402,9 @@ pair<cv::Mat,cv::Mat> MarkerMap::calculateExtrinsics(const std::vector<aruco::Ma
     }
 
     cv::Mat rvec,tvec;
-    if (p2d.size()!=0)//no points in the vector
+    if (p2d.size()!=0){//no points in the vector
         cv::solvePnPRansac(p3d,p2d,CameraMatrix,Distorsion,rvec,tvec);
+    }
     return make_pair(rvec,tvec);
 
 }

@@ -32,6 +32,7 @@ or implied, of Rafael Muñoz Salinas.
 #include "aruco.h"
 #include "cvdrawingutils.h"
 #include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 using namespace cv;
 using namespace aruco;
 
@@ -48,6 +49,14 @@ int waitTime = 0;
 class CmdLineParser{int argc; char **argv; public: CmdLineParser(int _argc,char **_argv):argc(_argc),argv(_argv){}  bool operator[] ( string param ) {int idx=-1;  for ( int i=0; i<argc && idx==-1; i++ ) if ( string ( argv[i] ) ==param ) idx=i;    return ( idx!=-1 ) ;    } string operator()(string param,string defvalue="-1"){int idx=-1;    for ( int i=0; i<argc && idx==-1; i++ ) if ( string ( argv[i] ) ==param ) idx=i; if ( idx==-1 ) return defvalue;   else  return ( argv[  idx+1] ); }};
 
 
+cv::Mat resize(const cv::Mat &in,int width){
+    if (in.size().width<=width) return in;
+    float yf=float(  width)/float(in.size().width);
+    cv::Mat im2;
+    cv::resize(in,im2,cv::Size(width,float(in.size().height)*yf));
+    return im2;
+
+}
 
 /************************************
  *
@@ -100,6 +109,7 @@ int main(int argc, char **argv) {
         MDetector.setDictionary(TheDictionary);//sets the dictionary to be employed (ARUCO,APRILTAGS,ARTOOLKIT,etc)
         MDetector.setThresholdParams(7, 7);
         MDetector.setThresholdParamRange(2, 0);
+
         //gui requirements : the trackbars to change this parameters
         iThresParam1 = MDetector.getParams()._thresParam1;
         iThresParam2 = MDetector.getParams()._thresParam2;
@@ -128,7 +138,7 @@ int main(int argc, char **argv) {
 
             for (unsigned int i = 0; i < TheMarkers.size(); i++) {
                 cout << TheMarkers[i]<<endl;
-                TheMarkers[i].draw(TheInputImageCopy, Scalar(0, 0, 255), 1);
+                TheMarkers[i].draw(TheInputImageCopy, Scalar(0, 0, 255));
             }
 
             // draw a 3d cube in each marker if there is 3d info
@@ -140,8 +150,8 @@ int main(int argc, char **argv) {
 
             // DONE! Easy, right?
             // show input with augmented information and  the thresholded image
-            cv::imshow("in", TheInputImageCopy);
-            cv::imshow("thres", MDetector.getThresholdedImage());
+            cv::imshow("in", resize(TheInputImageCopy,1280));
+            cv::imshow("thres", resize(MDetector.getThresholdedImage(),1280));
 
 
             key = cv::waitKey(waitTime); // wait for key to be pressed
@@ -172,13 +182,13 @@ void cvTackBarEvents(int pos, void *) {
     MDetector.detect(TheInputImage, TheMarkers, TheCameraParameters);
     TheInputImage.copyTo(TheInputImageCopy);
     for (unsigned int i = 0; i < TheMarkers.size(); i++)
-        TheMarkers[i].draw(TheInputImageCopy, Scalar(0, 0, 255), 1);
+        TheMarkers[i].draw(TheInputImageCopy, Scalar(0, 0, 255));
 
     // draw a 3d cube in each marker if there is 3d info
     if (TheCameraParameters.isValid())
         for (unsigned int i = 0; i < TheMarkers.size(); i++)
             CvDrawingUtils::draw3dCube(TheInputImageCopy, TheMarkers[i], TheCameraParameters);
 
-    cv::imshow("in", TheInputImageCopy);
-    cv::imshow("thres", MDetector.getThresholdedImage());
+    cv::imshow("in", resize(TheInputImageCopy,1280));
+    cv::imshow("thres", resize(MDetector.getThresholdedImage(),1280));
 }

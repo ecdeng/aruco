@@ -29,15 +29,12 @@ or implied, of Rafael Muñoz Salinas.
 #ifndef ArucoDictionaryBasedMarkerDetector_H
 #define ArucoDictionaryBasedMarkerDetector_H
 #include <opencv2/core/core.hpp>
-#include "exports.h"
-#include "marker.h"
-#include "markermap.h"
-#include "markerlabeler.h"
-#include "dictionary.h"
+#include "../markerlabeler.h"
+#include "../dictionary.h"
 namespace aruco {
 /**Labeler using a dictionary
  */
-class ARUCO_EXPORTS DictionaryBased :public MarkerLabeler {
+class   DictionaryBased :public MarkerLabeler {
 public:
 
     virtual ~DictionaryBased(){}
@@ -51,7 +48,7 @@ public:
 
 private:
 
-    bool  getInnerCode(const cv::Mat &thres_img, int total_nbits, vector<uint64_t> &ids);
+    bool  getInnerCode(const cv::Mat &thres_img, int total_nbits, std::vector<uint64_t> &ids);
     cv::Mat rotate(const cv::Mat &in) ;
     uint64_t touulong(const cv::Mat &code);
     Dictionary _dic;
